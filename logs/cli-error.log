@@ -1,0 +1,12 @@
+2017-11-14 10:03:52 Error: [Cake\Console\Exception\MissingShellException] Shell class for "Brake" could not be found. in C:\xampp\htdocs\kidsosiety\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php on line 327
+Exception Attributes: array (
+  'class' => 'Brake',
+)
+Stack Trace:
+#0 C:\xampp\htdocs\kidsosiety\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(226): Cake\Console\ShellDispatcher->findShell('Brake')
+#1 C:\xampp\htdocs\kidsosiety\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#2 C:\xampp\htdocs\kidsosiety\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#3 C:\xampp\htdocs\kidsosiety\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#4 {main}
+
+
