@@ -11,13 +11,15 @@ use Cake\ORM\Entity;
  * @property string $name
  * @property string $game_id
  * @property string $game_name
- * @property string $score_g1
- * @property string $score_g2
- * @property string $score_g3
- * @property string $score_g4
- * @property string $total_score
+ * @property int $score_g1
+ * @property int $score_g2
+ * @property int $score_g3
+ * @property int $score_g4
+ * @property int $total_score
  * @property \Cake\I18n\Time $created
  * @property \Cake\I18n\Time $updated
+ *
+ * @property \App\Model\Entity\Game $game
  */
 class Score extends Entity
 {

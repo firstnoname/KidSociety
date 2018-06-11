@@ -5,7 +5,6 @@
 
 <script>
     $(document).ready(function () {
-
         
         $('#graphform').change(function () {
             
@@ -67,7 +66,7 @@
 </div>
 
 <script>
-    new Morris.Line({
+    new Morris.Area({
   // ID of the element in which to draw the chart.
   element: 'myfirstchart',
   // Chart data records -- each entry in this array corresponds to a point on
@@ -77,7 +76,8 @@
     { year: '2009', value: 10 },
     { year: '2010', value: 5 },
     { year: '2011', value: 5 },
-    { year: '2012', value: 20 }
+    { year: '2012', value: 20 },
+    { year: '2013', value: 4 }
   ],
   // The name of the data record attribute that contains x-values.
   xkey: 'year',

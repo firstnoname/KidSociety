@@ -39,6 +39,7 @@
         <?= $this->Form->create('Post', array('url' => '/Scores/index/')); ?>
         
         <table class="table-invers" style="width: 30%">
+        
             <tr>
                 <td>
                     <?= $this->Form->select('searchfrom', $searchfrom, ['class' => 'form-control', 'id' => 'searchfrom']); ?>
@@ -49,10 +50,8 @@
         </table>
         <br><br>
     <table class="table table-bordered table-invers" style="width: 100%">
-        
         <thead>
             <tr>
-               
                 <th scope="col"><?= $this->Paginator->sort('username') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('game_name') ?></th>
@@ -67,6 +66,9 @@
         </thead>
         <tbody>
             <?php foreach ($scores as $score): ?>
+            <?php $chart_data = "{ year:'".$score->name."', total:'".$score->total_score."' }";
+                echo $chart_data;
+            ?>
             <tr>
                 <td><?= h($score->username) ?></td>
                 <td><?= h($score->name) ?></td>

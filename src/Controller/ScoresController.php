@@ -41,9 +41,6 @@ class ScoresController extends AppController
             
             $scores = $queryscore->toArray();
 //             pr($scores);
-            
-            
-            
         }else{
             echo "Check post is false";
             $scores = $this->paginate($this->Scores);
@@ -55,11 +52,9 @@ class ScoresController extends AppController
                 ['valueField'=>'game_nameTH']);
         $searchfrom = $query->toArray();
 //        pr($searchfrom);
-
-        $this->set(compact('scores','searchfrom'));
-        $this->set('_serialize', ['scores']);
-        
-        
+        $test = "Hello";
+        $this->set(compact('scores','searchfrom','test'));
+        $this->set('_serialize', ['scores']);      
         
     }
 
@@ -158,18 +153,24 @@ class ScoresController extends AppController
             
             }else if($graphNum == '2'){
                 //graphNum = อายุ
-    
             }else{
                 
             }
         }//end check post.
-        
-        
-
+   
         $graph = ['1' => 'ทั่วไป', '2' => 'อายุ', '3' => 'รายได้'];
         $this->set(compact('graph'));
         $this->set('_serialize', ['scores']);
 
-
     }
+
+    public function reportNameScore(){
+        $queryscore = $this->Scores->find('all',
+        ['order' => ['total_score']]);
+        $scores = $queryscore->toArray();
+        // pr($scores);
+        $this->set(compact('scores'));
+        $this->set('_serialize', ['scores']);
+    }
+
 }

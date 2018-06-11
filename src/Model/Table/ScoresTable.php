@@ -67,18 +67,23 @@ class ScoresTable extends Table
             ->allowEmpty('game_name');
 
         $validator
+            ->integer('score_g1')
             ->allowEmpty('score_g1');
 
         $validator
+            ->integer('score_g2')
             ->allowEmpty('score_g2');
 
         $validator
+            ->integer('score_g3')
             ->allowEmpty('score_g3');
 
         $validator
+            ->integer('score_g4')
             ->allowEmpty('score_g4');
 
         $validator
+            ->integer('total_score')
             ->allowEmpty('total_score');
 
         return $validator;
