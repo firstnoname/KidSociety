@@ -86,6 +86,26 @@ class ScoresTable extends Table
             ->integer('total_score')
             ->allowEmpty('total_score');
 
+        $validator
+            ->numeric('time_g1')
+            ->requirePresence('time_g1', 'create')
+            ->notEmpty('time_g1');
+
+        $validator
+            ->numeric('time_g2')
+            ->requirePresence('time_g2', 'create')
+            ->notEmpty('time_g2');
+
+        $validator
+            ->numeric('time_g3')
+            ->requirePresence('time_g3', 'create')
+            ->notEmpty('time_g3');
+
+        $validator
+            ->numeric('time_g4')
+            ->requirePresence('time_g4', 'create')
+            ->notEmpty('time_g4');
+
         return $validator;
     }
 

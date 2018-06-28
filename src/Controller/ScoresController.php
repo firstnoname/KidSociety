@@ -166,9 +166,49 @@ class ScoresController extends AppController
 
     public function reportNameScore(){
         $queryscore = $this->Scores->find('all',
+        ['conditions' => ['Scores.name' => 'บูกิ']],
         ['order' => ['total_score']]);
         $scores = $queryscore->toArray();
         // pr($scores);
+        $this->set(compact('scores'));
+        $this->set('_serialize', ['scores']);
+    }
+
+    public function reportStaffAll(){
+        //Check post.
+        if($this->request->is('post')){
+            //return "Hello from index";
+            //pr('1111');
+            //echo json_encode("Hello from index");
+            
+            $game_id = $this->request->data['searchfrom'];
+//            pr($game_id);
+            $queryscore = $this->Scores->find('all',
+                ['conditions' => ['game_id' => $game_id]]);
+            
+            $scores = $queryscore->toArray();
+//             pr($scores);
+        }else{
+            echo "Check post is false";
+            $scores = $this->paginate($this->Scores);
+        }
+        
+        
+               
+        $query = $this->Games->find('list',
+                ['valueField'=>'game_nameTH']);
+        $searchfrom = $query->toArray();
+//        pr($searchfrom);
+        $test = "Hello";
+     
+        $this->set(compact('scores'));
+        $this->set('_serialize', ['scores']);
+    }
+
+    public function reportStaffTime($id=null){
+
+        $scores = $this->Scores->get($id);   
+
         $this->set(compact('scores'));
         $this->set('_serialize', ['scores']);
     }

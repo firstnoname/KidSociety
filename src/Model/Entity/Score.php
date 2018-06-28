@@ -16,6 +16,10 @@ use Cake\ORM\Entity;
  * @property int $score_g3
  * @property int $score_g4
  * @property int $total_score
+ * @property float $time_g1
+ * @property float $time_g2
+ * @property float $time_g3
+ * @property float $time_g4
  * @property \Cake\I18n\Time $created
  * @property \Cake\I18n\Time $updated
  *
