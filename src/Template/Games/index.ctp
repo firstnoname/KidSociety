@@ -33,7 +33,7 @@
                 </ul>
 
                 <ul class="side-nav">
-                    <li><?= $this->Html->link(__('ดูคะแนน'), '/scores/scoreReport/') ?></li>
+                    <li><?= $this->Html->link(__('ดูคะแนน'), '/scores/index/') ?></li>
                 </ul>
             </div>
             

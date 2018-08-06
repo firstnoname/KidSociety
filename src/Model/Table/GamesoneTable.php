@@ -91,6 +91,11 @@ class GamesoneTable extends Table
             ->integer('game1_complete_status')
             ->allowEmpty('game1_complete_status');
 
+        $validator
+            ->integer('position')
+            ->requirePresence('position', 'create')
+            ->notEmpty('position');
+
         return $validator;
     }
 

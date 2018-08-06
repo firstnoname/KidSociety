@@ -82,7 +82,6 @@ class ScoresController extends AppController
      */
     public function add()
     {
-        
         $score = $this->Scores->newEntity();
         if ($this->request->is('post')) {
             $score = $this->Scores->patchEntity($score, $this->request->getData());
@@ -205,9 +204,16 @@ class ScoresController extends AppController
         $this->set('_serialize', ['scores']);
     }
 
-    public function reportStaffTime($id=null){
+    public function reportStaffTime($username=null){
 
-        $scores = $this->Scores->get($id);   
+        // $scores = $this->Scores->get($id);   
+        //pr($username);
+        $query = $this->Scores->find('all',
+            ['conditions' => ['username' => $username]]);
+        
+        $scores = $query->toArray();
+
+        // pr($scores);
 
         $this->set(compact('scores'));
         $this->set('_serialize', ['scores']);

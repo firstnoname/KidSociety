@@ -20,6 +20,7 @@ use Cake\ORM\Entity;
  * @property float $time_g2
  * @property float $time_g3
  * @property float $time_g4
+ * @property float $time_total
  * @property \Cake\I18n\Time $created
  * @property \Cake\I18n\Time $updated
  *

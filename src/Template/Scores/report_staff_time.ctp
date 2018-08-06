@@ -53,21 +53,23 @@
             </tr>
         </thead>
         <tbody>
-            <?php $chart_data = "{ year:'".$scores->name."', total:'".$scores->total_score."' }";
-                //echo $chart_data;
-            ?>
-            <tr>
-                <td><?= h($scores->username) ?></td>
-                <td><?= h($scores->name) ?></td>
-                <td><?= h($scores->game_name) ?></td>
-                <td><?= h($scores->time_g1) ?></td>
-                <td><?= h($scores->time_g2) ?></td>
-                <td><?= h($scores->time_g3) ?></td>
-                <td><?= h($scores->time_g4) ?></td>
-                <td><?= h($scores->created) ?></td>
-                
-            </tr>
-         
+        
+            <?php foreach ($scores as $score): ?>
+                <?php $chart_data = "{ year:'".$score->name."', total:'".$score->total_score."' }";
+                    //echo $chart_data;
+                ?>
+                <tr>
+                    <td><?= h($score->username) ?></td>
+                    <td><?= h($score->name) ?></td>
+                    <td><?= h($score->game_name) ?></td>
+                    <td><?= h($score->time_g1) ?></td>
+                    <td><?= h($score->time_g2) ?></td>
+                    <td><?= h($score->time_g3) ?></td>
+                    <td><?= h($score->time_g4) ?></td>
+                    <td><?= h($score->created) ?></td>
+                    
+                </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
 

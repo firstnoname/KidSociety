@@ -20,6 +20,7 @@ use Cake\ORM\Entity;
  * @property string $game1_voiceEN_path
  * @property string $game1_image_path
  * @property int $game1_complete_status
+ * @property int $position
  *
  * @property \App\Model\Entity\Game $game
  */

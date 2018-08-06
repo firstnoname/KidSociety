@@ -38,6 +38,7 @@ class GamesoneFixture extends TestFixture
         'game1_voiceEN_path' => ['type' => 'string', 'length' => 200, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'game1_image_path' => ['type' => 'string', 'length' => 200, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'game1_complete_status' => ['type' => 'integer', 'length' => 1, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'position' => ['type' => 'integer', 'length' => 1, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
         ],
@@ -55,20 +56,21 @@ class GamesoneFixture extends TestFixture
      */
     public $records = [
         [
-            'id' => '031fa708-a205-45ad-9a34-5d812d32f17c',
+            'id' => '991e857e-d2c8-4fa7-ae25-ec78ea8effe8',
             'game1_number' => 1,
             'game1_nameTH' => 'Lorem ipsum dolor sit amet',
             'game1_nameEN' => 'Lorem ipsum dolor sit amet',
             'game1_voiceTH_name' => 'Lorem ipsum dolor sit amet',
             'game1_voiceEN_name' => 'Lorem ipsum dolor sit amet',
             'game1_image_name' => 'Lorem ipsum dolor sit amet',
-            'game_id' => 'b55c7679-b6b5-42f5-b378-9b997df06384',
-            'created' => '2018-01-08 08:41:23',
-            'updated' => '2018-01-08 08:41:23',
+            'game_id' => '03f055b5-0340-46ab-834e-f31b3d986920',
+            'created' => '2018-07-11 08:46:52',
+            'updated' => '2018-07-11 08:46:52',
             'game1_voiceTH_path' => 'Lorem ipsum dolor sit amet',
             'game1_voiceEN_path' => 'Lorem ipsum dolor sit amet',
             'game1_image_path' => 'Lorem ipsum dolor sit amet',
-            'game1_complete_status' => 1
+            'game1_complete_status' => 1,
+            'position' => 1
         ],
     ];
 }

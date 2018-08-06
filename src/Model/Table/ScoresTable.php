@@ -106,6 +106,11 @@ class ScoresTable extends Table
             ->requirePresence('time_g4', 'create')
             ->notEmpty('time_g4');
 
+        $validator
+            ->numeric('time_total')
+            ->requirePresence('time_total', 'create')
+            ->notEmpty('time_total');
+
         return $validator;
     }
 
